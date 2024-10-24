@@ -1,0 +1,353 @@
+:root {
+    --primary-100: #ff1717;
+    --primary-200: #ff616f;
+    --primary-300: #ffcfcf;
+    --accent-100: #FF5252;
+    --accent-200: #fff0e0;
+    --text-100: #FFFFFF;
+    --text-200: #e0e0e0;
+    --bg-100: #1A1A1A;
+    --bg-200: #292929;
+    --bg-300: #404040;
+    --bg300: #404040;
+}
+
+body {
+    background-color: var(--bg-100);
+    color: var(--text-100);
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    background-color: var(--bg-200);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 60%;
+}
+
+/* Small devices (phones) */
+@media (max-width: 767px) {
+    .container {
+        max-width: 95%;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 60%;
+    }
+}
+
+.card {
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+
+    background-color: var(--bg-300);
+    border-radius: 20px;
+    align-items: center;
+    transition: transform .2s;
+    cursor: pointer;
+
+}
+
+.card-img-top {
+    min-height: 15rem;
+}
+
+.card:hover {
+    transform: scale(1.07);
+}
+
+.card-title {
+    text-align: center;
+    color: var(--accent-200);
+}
+
+h1,
+h2 {
+    color: var(--primary-100);
+    text-transform: uppercase;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+h3,
+h4 {
+    color: var(--primary-200);
+    text-transform: uppercase;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+
+    /* This removes any extra margin that might affect centering */
+    margin: 0;
+
+}
+
+strong {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+p,
+li {
+    color: var(--text-100);
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.img-thumbnail {
+    /* Animation */
+    transition: transform .2s;
+    min-height: 15rem;
+    margin-bottom: 2rem;
+
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.btn-primary {
+    background-color: var(--primary-100);
+    border-color: var(--primary-100);
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-200);
+    border-color: var(--primary-200);
+}
+
+.btn-secondary {
+    background-color: var(--accent-100);
+    border-color: var(--accent-100);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-200);
+    border-color: var(--accent-200);
+}
+
+#my-name {
+    color: var(--primary-100);
+    margin-left: 3rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+
+}
+
+#my-name:hover {
+    color: var(--primary-200);
+    text-decoration: none;
+}
+
+.my-photo {
+    margin-left: 2rem;
+}
+
+.my-photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.container img {
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.container img.arrow {
+    width: 50px;
+    /* or set a specific width */
+    height: 50px;
+    /* or set a specific height */
+}
+
+
+.collapsible {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    background-color: var(--bg-300);
+
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 1rem;
+
+    /* This centers the content vertically */
+    align-items: center;
+
+    /*justify-content: flex;*/
+    /*align-items: left;*/
+}
+
+.collapsible:active,
+.collapsible:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.active,
+.collapsible:hover {
+    background-color: var(--bg-300);
+}
+
+.content {
+    padding: 0 18px;
+    /* display: none; */
+    max-height: 0;
+
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    /* background-color: #f1f1f1; */
+}
+
+.arrow img {
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    left: 10px;
+    right: 20px;
+    transition: transform .3s ease;
+    transform: rotate(90deg);
+    margin-right: 20px;
+
+}
+
+.collapsible.active .arrow img {
+    transform: rotate(180deg);
+
+}
+
+.navbar-icons {
+    display: flex;
+    justify-content: center;
+    margin-right: 2rem;
+}
+
+.navbar-icons img {
+    /* width: 32px; */
+    height: 2.5rem;
+    margin: 0.4rem;
+    /* background-size: 32px 32px; */
+}
+
+.nav-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 35%;
+    cursor: pointer;
+}
+
+.left-div {
+    left: 1em;
+}
+
+.right-div {
+    right: 1em;
+}
+
+.left-div:hover .left-arrow {
+    transform: rotate(-90deg) scale(1.3);
+}
+
+.right-div:hover .right-arrow {
+    transform: rotate(90deg) scale(1.3);
+
+}
+
+.left-arrow {
+    transition: transform 0.3s ease;
+    position: relative !important;
+    user-select: none;
+
+    /* left: 500% !important;  */
+
+    top: 50%;
+    bottom: 50%;
+    border-radius: 0% !important;
+
+    left: 2rem !important;
+
+    transform: rotate(-90deg);
+
+}
+
+.right-arrow {
+    transition: transform 0.3s ease;
+    /* Optional: smooth transition */
+    user-select: none;
+
+    position: relative;
+    border-radius: 0% !important;
+
+    top: 50%;
+    bottom: 50%;
+    /* Prevents the image from being selectable */
+    left: calc(100% - 4rem) !important;
+
+    transform: rotate(90deg);
+}
+
+.modal {
+    user-select: none;
+}
+
+
+/* Center the modal */
+.modal-content {
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    width: auto;
+}
+
+.modal-body img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 5rem;
+}
+
+.big-image {
+    min-width: 100%;
+    min-height: 85vh;
+}
+
+.faded {
+    opacity: 0.25;
+    transition: opacity .3s linear;
+}
+
+.faded.show {
+    opacity: 1;
+}
