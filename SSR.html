@@ -3,6 +3,24 @@
 
 <head>
     <title>Screen-Space Reflection</title>
+
+    <!-- General Meta -->
+    <meta name="description" content="A showcase of my projects and portfolio.">
+    <link rel="icon" href="images/Pathtracing/0.jpg">
+
+    <!-- Open Graph Meta (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Karim Sayed - Rendering Engineer">
+    <meta property="og:description" content="A showcase of my projects and portfolio.">
+    <meta property="og:image" content="https://karimsayedre.github.io/images/Pathtracing/0.jpg">
+    <meta property="og:url" content="https://karimsayedre.github.io/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Karim Sayed - Rendering Engineer">
+    <meta name="twitter:description" content="A showcase of my projects and portfolio.">
+    <meta name="twitter:image" content="https://karimsayedre.github.io/images/Pathtracing/0.jpg">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -47,22 +65,26 @@
             to its excessive noise and less-than-ideal results in the AMD demo. Instead, I opted for cone tracing which
             was recommended by Cherno to allow for rough reflections. The color buffer is preconvoluted into mips, the
             mip to sample is decided based on the distance and
-            roughness of the surface being shaded, utilizing the cone tracing algorithm, providing a more realistic and visually pleasing result. You can
+            roughness of the surface being shaded, utilizing the cone tracing algorithm, providing a more realistic and
+            visually pleasing result. You can
             learn more about SSSR and its implementation from the <a href="https://gpuopen.com/fidelityfx-sssr/"
                 target="_blank">official repository</a>.
         </p>
 
         <h2>Results and Impact</h2>
-        <p>The integration of SSSR into the Hazel engine had a significant impact. It outperformed other algorithms that I had implemeted before, including SSR without a Hierarchical Z-Buffer, which
-            I had incorporated in my early work in Beyond (my university final year project). The performance optimization from the Hierarchical Z-Buffer (HZB) was particularly impressive,
-            especially considering the limitations of the previous implementations. Also, compared to AMD's stochastic algorithm was again, too noisy and </p>
+        <p>The integration of SSSR into the Hazel engine had a significant impact. It outperformed other algorithms that
+            I had implemeted before, including SSR without a Hierarchical Z-Buffer, which
+            I had incorporated in my early work in Beyond (my university final year project). The performance
+            optimization from the Hierarchical Z-Buffer (HZB) was particularly impressive,
+            especially considering the limitations of the previous implementations. Also, compared to AMD's stochastic
+            algorithm was again, too noisy and </p>
 
         <h2>Future Work</h2>
         <p>
             Temporal Anti-Aliasing (TAA) works well with SSSR, and it's an area where performance can be improved
             without sacrificing too much quality. I also plan to implement ray traced reflections, and
-            perhaps even a hybrid of both ray traced reflections and SSSR. You can learn more about hybrid reflections from <a
-                href="https://gpuopen.com/fidelityfx-hybrid-reflections/" target="_blank">here</a>.</p>
+            perhaps even a hybrid of both ray traced reflections and SSSR. You can learn more about hybrid reflections
+            from <a href="https://gpuopen.com/fidelityfx-hybrid-reflections/" target="_blank">here</a>.</p>
 
         <h2>Conclusion</h2>
         <p>
