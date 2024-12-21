@@ -1,7 +1,12 @@
 function navbar() {
     let navbarHTML = `
     <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1"> <a id="my-name" href="index.html">Karim Sayed</a> </span>
+        <span class="navbar-brand mb-0 h1 homepage-link">
+            <a href="index.html" target="_blank" class="navbar-icons">
+                <img src="icons/Beyond.png" class="navbar-icons" alt="Homepage">
+                <a id="my-name" href="index.html">Karim Sayed</a>
+            </a>
+        </span>
         <div class="navbar-icons">
             <a href="KarimSayedResume.pdf" target="_blank">
                 <img src="icons/resume.png" class="navbar-icons" alt="Resume">
@@ -25,7 +30,7 @@ function navbar() {
 function footer() {
     let footerHTML = `
     <footer>
-        <div class="navbar-icons text-center">
+        <div class="footer-icons text-center">
             <a href="KarimSayedResume.pdf" target="_blank">
                 <img src="icons/resume.png" class="navbar-icons" alt="Resume">
             </a>
