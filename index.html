@@ -3,6 +3,7 @@
 
 <head>
 	<title>Karim Sayed - Rendering Engineer</title>
+	<meta charset="UTF-8">
 
 	<!-- General Meta -->
 	<meta name="description" content="A showcase of my projects and portfolio.">
@@ -21,6 +22,7 @@
 	<meta name="twitter:description" content="A showcase of my projects and portfolio.">
 	<meta name="twitter:image" content="https://karimsayedre.github.io/images/Pathtracing/0.jpg">
 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -45,18 +47,6 @@
 <body>
 	<script>
 		navbar();
-
-		function calculateYearsSince(month, year) {
-			const startDate = new Date(year, month - 1); // JavaScript months are 0-based
-			const currentDate = new Date();
-			const years = currentDate.getFullYear() - startDate.getFullYear();
-			const months = currentDate.getMonth() - startDate.getMonth();
-
-			if (months < 0 || (months === 0 && currentDate.getDate() < startDate.getDate())) {
-				return years - 1;
-			}
-			return years;
-		}
 
 		document.addEventListener('DOMContentLoaded', () => {
 			const years = calculateYearsSince(8, 1999);
@@ -94,29 +84,32 @@
 						appealing, but also grounded in realism, offering a truly immersive experience. Also, I love
 						Cornell boxes!
 						<br>
-						<br>
-						Currently, I'm exploring new frontiers in rendering technology with my private fork of the Hazel
-						Engine, integrating cutting-edge techniques like, DLSS, ReSTIR PT, and RTXGI and
-						developing a path tracer based on Vulkan hardware ray tracing. I'm always looking for
-						opportunities to learn, grow, and make a meaningful impact in the field of computer graphics.
 					</p>
 
 					<p>
-						If you want to know more about me or my work, please feel free to contact me.
+						If you want to know more about me or my work, please feel free to contact me on <a
+							href="mailto:karimsayedre@gmail.com">my email</a>.
 						<br>
-						You can also download my resume from <a href="KarimSayedResume.pdf" target="_blank">here</a>.
+					<div class="dropdown dropdown-dark">
+						<!-- Add "btn" and "dropdown-toggle" classes to the button -->
+						<button class="btn btn-secondary dropdown-toggle .btn-primary" type="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Download here
+						</button>
+						<!-- Move the dropdown menu outside the button -->
+						<ul class="dropdown-menu dropdown-menu-dark">
+							<li><a class="dropdown-item" href="resumes/KarimSayedResumeGraphics.pdf"
+									target="_blank">Graphics Programmer Resume</a></li>
+							<li><a class="dropdown-item" href="resumes/KarimSayedResumeCPP.pdf" target="_blank">C++
+									Programmer Resume</a></li>
+						</ul>
+					</div>
 					</p>
 				</div>
 			</div>
-
 		</div>
-		<h2>Experience</h2>
-		<p>
-			Alright, let's dive into my journey in the world of rendering engineering. It all started when I was working
-			on my final year project which was a rendering engine. Since then, it's been all about pushing the
-			boundaries of visual quality and performance.
-		</p>
 
+		<h2>Experience</h2>
 
 		<button class="collapsible btn btn-default">
 			<div class="arrow"><img src="icons/arrow.png"></div>
@@ -152,7 +145,7 @@
 
 		<button class="collapsible  btn btn-default">
 			<div class="arrow"><img src="icons/arrow.png"></div>
-			<h4>Hazel Engine (Private fork) - October 2023 to Present</h4>
+			<h4>Beyond Engine - October 2023 to Present</h4>
 		</button>
 		<div class="content">
 			<p>
@@ -162,12 +155,12 @@
 				working on a forked version of the Hazel Engine. In this independent project, I have:
 			<ul>
 				<li>
-					Integrated NVIDIA DLSS, enabling higher performance and visual quality through AI upscaling
+					Integrated NVIDIA DLSS 3.5, enabling higher performance and visual quality through AI upscaling
 					techniques.
 				</li>
 				<li>
-					Optimized CPU-side performance, achieving significant improvements in frame times and overall
-					efficiency.
+					Optimized CPU code using multiple techniques, including shader metadata caching and reading,
+					yielding significant performance improvements.
 				</li>
 				<li>
 					Engineered a custom ray tracer using Vulkan's hardware-accelerated ray tracing pipeline.
@@ -179,13 +172,22 @@
 					Designed a physically-based path tracer to improve rendering quality for cinematic scenes.
 				</li>
 				<li>
-					Optimized memory usage with Block Compression (BCn) formats and caching strategies.
+					Optimized memory usage with Block Compression (BCn) formats and caching strategies using DDS to
+					store all LODs.
+				</li>
+				<li>
+					Optimized compilation times by reducing header parsing counts, cutting compilation time from 75s to
+					60s on an i5 13600KF.
 				</li>
 				<li>
 					Enhanced rendering performance and flexibility using bindless descriptors.
 				</li>
+				<li>
+					Optimized resource descriptor processing by implementing a bit-manipulated hashmap, reducing times
+					from 1ms to 0.02ms.
+				</li>
 			</ul>
-			These enhancements have further expanded the capabilities of the Hazel Engine, demonstrating my ability to
+			These enhancements have further expanded the capabilities of the Beyond Engine, demonstrating my ability to
 			independently drive the development and improvement of complex graphics engines.
 			</p>
 		</div>
@@ -198,9 +200,7 @@
 		<div class="content">
 
 			<p>
-				During my mandatory military service year, I worked on Tensor, a propriatary fork of the Hazel Engine
-				maintained
-				by <a href="https://sensorfoundries.com" target="_blank">Sensor Foundries Inc.</a> I was able to spend a
+				This is Tensor, maintained by Senkii Inc. I was able to spend a
 				week (holiday from military service) every 2 weeks spent
 				at my militray unit. Despite the constraints, I was able to make substantial
 				contributions to Tensor:
@@ -275,11 +275,9 @@
 		</div>
 		<div class="row">
 
-			<!-- Hazel engine project -->
 			<div class="col-md-12">
 				<br>
 				<h2>Rendering Techniques</h2>
-				<!-- Grid of photos for Hazel engine -->
 				<div class="row">
 					<!-- Path tracing feature -->
 					<div class="col-sm-12 col-md-6 col-lg col-xl-3">
@@ -422,7 +420,19 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- About me section -->
+		<div class="row">
+			<div class="row">
+				<div class="col">
+					<h2>Education</h2>
+					<h5><a href="https://www.mmu.edu.my/">Multimedia University, Malaysia</a></h5>
+					<p>Bachelor of Computer Science (Hons.) - Software Engineering Specialisation - 2021</p>
+				</div>
+			</div>
+		</div>
 	</div>
+
 	<script>
 		footer();
 	</script>

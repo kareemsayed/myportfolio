@@ -28,3 +28,15 @@ function addBehaviour() {
         });
     });
 }
+
+function calculateYearsSince(month, year) {
+    const startDate = new Date(year, month - 1); // JavaScript months are 0-based
+    const currentDate = new Date();
+    const years = currentDate.getFullYear() - startDate.getFullYear();
+    const months = currentDate.getMonth() - startDate.getMonth();
+
+    if (months < 0 || (months === 0 && currentDate.getDate() < startDate.getDate())) {
+        return years - 1;
+    }
+    return years;
+}

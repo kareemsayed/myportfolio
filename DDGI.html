@@ -3,6 +3,7 @@
 
 <head>
     <title>NVIDIA RTXGI-DDGI</title>
+    <meta charset="UTF-8">
 
     <!-- General Meta -->
     <meta name="description" content="A showcase of my projects and portfolio.">
@@ -47,12 +48,12 @@
         navbar();
     </script>
     <div class="container">
-        <h2>Integration of NVIDIA's RTXGI-DDGI into Hazel Engine</h2>
+        <h2>Integration of NVIDIA's RTXGI-DDGI into Beyond Engine</h2>
         <p>
             As a graphics programmer, the allure of dynamic global illumination (GI) and its potential to bring
             unparalleled realism to games has always captivated me. When NVIDIA unveiled their <a
                 href="https://github.com/NVIDIAGameWorks/RTXGI-DDGI"> Dynamic Diffuse Global
-                Illumination (DDGI)</a> technology, I recognized an opportunity to augment the Hazel Engine with this
+                Illumination (DDGI)</a> technology, I recognized an opportunity to augment the Beyond Engine with this
             state-of-the-art feature.
         </p>
 
@@ -76,15 +77,15 @@
 
         <h2>The Integration Process</h2>
         <p>
-            The first step was to prepare the Hazel Engine for DDGI. This involved adjusting the engine to support
+            The first step was to prepare the Beyond Engine for DDGI. This involved adjusting the engine to support
             Vulkan Ray Tracing features. Then, I integrated the DDGI shaders into
-            Hazel's rendering pipeline. It wasn't easy to get the DDGI calculations to work well with Hazel's existing
-            lighting model. It required a deep understanding of both Hazel's rendering pipeline and the DDGI shader.
+            Beyond's rendering pipeline. It wasn't easy to get the DDGI calculations to work well with Beyond's existing
+            lighting model. It required a deep understanding of both Beyond's rendering pipeline and the DDGI shader.
         </p>
 
         <h2>Results and Optimization</h2>
         <p>
-            After integrating DDGI, the difference was clear. Scenes rendered in Hazel now had a new depth and realism,
+            After integrating DDGI, the difference was clear. Scenes rendered in Beyond now had a new depth and realism,
             thanks to the dynamic global illumination from DDGI. But, the initial implementation was quite
             performance-intensive. So, I spent time profiling and optimizing the DDGI integration. This involved
             improving the ray-tracing pipeline. DDGI is already highly optimized, so the goal was to make sure
@@ -101,7 +102,7 @@
 
         <h2>Conclusion</h2>
         <p>
-            Integrating NVIDIA's DDGI into the Hazel Engine was a challenging but rewarding experience. It, not only
+            Integrating NVIDIA's DDGI into the Beyond Engine was a challenging but rewarding experience. It, not only
             improved the visual quality of the engine, but also gave me a better understanding of modern real-time
             rendering techniques, and it's so much faster than path tracing. One important lesson from this experience
             is the importance of planning ahead. As the saying goes,

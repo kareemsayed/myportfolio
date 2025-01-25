@@ -3,6 +3,7 @@
 
 <head>
     <title>Path Tracing</title>
+    <meta charset="UTF-8">
 
     <!-- General Meta -->
     <meta name="description" content="A showcase of my projects and portfolio.">
@@ -48,16 +49,16 @@
     </script>
     <div class="container">
 
-        <h2>Implementing Vulkan Path Tracing in Hazel Engine</h2>
+        <h2>Implementing Vulkan Path Tracing in Beyond Engine</h2>
         <p>Path tracing, a powerful rendering technique, offers simplicity with its almost implicit features like soft
             shadows, global illumination, reflections and refractions. Unlike rasterization, which naturally lacks
             global illumination, path
             tracing
             creates more realistic and
             visually pleasing images by simulating the way light bounces around in a scene.</p>
-        <p>Integrating Vulkan path tracing into the Hazel Engine was a challenging task that took me over three
+        <p>Integrating Vulkan path tracing into the Beyond Engine was a challenging task that took me over three
             months to complete. I had to make major structural changes in the engine, ranging from the shaders to
-            mesh loading and rendering, because the Hazel Engine was not initially designed with ray tracing in
+            mesh loading and rendering, because the Beyond Engine was not initially designed with ray tracing in
             mind.</p>
         <p>
             Here's a rant for you, one of the challenges I faced during the implementation was the incomplete state of
@@ -87,22 +88,23 @@
 
         <h2>Results and Impact</h2>
         <p>
-            The primary impact of this implementation is the introduction of global illumination into the Hazel
+            The primary impact of this implementation is the introduction of global illumination into the Beyond
             Engine. Without indirect lighting, scenes can appear dull and flat. However, with the addition of global
-            illumination through path tracing, scenes in the Hazel Engine now have a more realistic and visually
+            illumination through path tracing, scenes in the Beyond Engine now have a more realistic and visually
             rich appearance.
         </p>
 
         <h2>Future Work</h2>
-        <p>Looking ahead, I plan to integrate either DLSS or FSR3 to enable the engine to use path tracing for games
-            at high frame rates. Additionally, I plan to incorporate <a
-                href="https://developer.NVIDIA.com/rtx/ray-tracing/rt-denoisers" target="_blank">NVIDIA's real-time
+        <p>Looking ahead, I plan to integrate ReSTIR path tracing for high quality rendering at real-time frame rates.
+            Additionally, I
+            plan to incorporate <a href="https://developer.NVIDIA.com/rtx/ray-tracing/rt-denoisers"
+                target="_blank">NVIDIA's real-time
                 denoisers</a> to
             further enhance the performance and quality. The ambitious target is to be able to make games using just the
             path tracer.</p>
 
         <h2>Conclusion</h2>
-        <p>The journey of implementing path tracing in the Hazel Engine has been both challenging and rewarding. It
+        <p>The journey of implementing path tracing in the Beyond Engine has been both challenging and rewarding. It
             has not only improved the visual quality of the engine but also provided an intuitive way to enhance my
             mathematical skills. One key takeaway from this experience, as the saying goes, "If it ain't broke, don't
             fix it" I learned this the hard way, after taking month dealing with undefined behaviour just be cause of a
