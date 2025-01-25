@@ -133,19 +133,18 @@ li {
     padding: 10px 20px;
 }
 
-.btn-primary:hover {
-    background-color: var(--primary-200);
-    border-color: var(--primary-200);
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary.show {
+    background-color: var(--primary-200) !important;
+    border-color: var(--primary-200) !important;
 }
 
-.btn-secondary {
-    background-color: var(--accent-100);
-    border-color: var(--accent-100);
-}
-
-.btn-secondary:hover {
-    background-color: var(--accent-200);
-    border-color: var(--accent-200);
+/* Anchor-based buttons */
+a.btn-primary:active,
+a.btn-primary.hover {
+    background-color: var(--primary-200) !important;
+    border-color: var(--primary-200) !important;
 }
 
 .my-photo {
