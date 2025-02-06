@@ -49,7 +49,7 @@ function navbar() {
     let navbarHTML = /*html*/`
     <nav class="navbar navbar-dark bg-dark">
         <span class="navbar-brand homepage-link">
-            <a href="index.html" target="_blank" class="navbar-icons mb-0 h1" id="my-name">
+            <a href="index.html" class="navbar-icons mb-0 h1" id="my-name">
                 <img src="icons/Beyond.png" class="Beyond-logo" alt="Homepage">
                 Karim Sayed
             </a>
